@@ -1,10 +1,12 @@
 package leetcode.arrays;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.PriorityQueue;
 import java.util.Set;
 
 /**
@@ -58,6 +60,13 @@ public class TopKFrequentElements {
                 break;
         }
 
+        PriorityQueue<Integer> q = new PriorityQueue<>(new Comparator<Integer>() {
+
+            @Override
+            public int compare(Integer o1, Integer o2) {
+                return 0;
+            }
+        });
         return result;
 
     }
